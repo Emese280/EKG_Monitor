@@ -4,7 +4,7 @@ Webalkalmazás, amely mutatja az életjeleket, mint az EKG-görbét, pulzust és
 
 ![EKG Monitor Screenshot](./screenshot.png)
 
-# Technológiák
+## Technológiák
 
 *Backend*
 - Node.js + Express
@@ -17,7 +17,7 @@ Webalkalmazás, amely mutatja az életjeleket, mint az EKG-görbét, pulzust és
 - Vite (build tool)
 - Socket.IO Client
 
-# Projekt struktúra
+## Projekt struktúra
 
 ```
 ├── backend/
@@ -38,13 +38,13 @@ Webalkalmazás, amely mutatja az életjeleket, mint az EKG-görbét, pulzust és
         └── services/socket.js  # Socket kapcsolat
 ```
 
-# Telepítés és indítás
+## Telepítés és indítás
 
-# Előfeltételek
+## Előfeltételek
 - Node.js 18+
 - MySQL (opcionális, SQLite is működik alapból)
 
-# 1. Backend telepítése
+### 1. Backend telepítése
 
 ```bash
 cd backend
@@ -61,7 +61,7 @@ DB_DIALECT=sqlite
 
 > MySQL használatához állítsa be: `DB_DIALECT=mysql`, `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`
 
-# 2. Frontend telepítése és build
+### 2. Frontend telepítése és build
 
 ```bash
 cd frontend
@@ -69,7 +69,7 @@ npm install
 npm run build
 ```
 
-# 3. Indítás
+### 3. Indítás
 
 ```bash
 cd backend
@@ -81,7 +81,7 @@ npm run dev
 Az alkalmazás elérhető: (http://localhost:3000)
 
 
-# Fejlesztői mód
+## Fejlesztői mód
 
 Egy paranccsal elindítható a backend (nodemon) és a frontend (Vite dev szerver) egyszerre:
 
@@ -92,7 +92,7 @@ npm run dev:student
 
 Fejlesztői mód esetén a frontend a (http://localhost:5173) címen érhető el.
 
-# Funkciók
+## Funkciók
 
 - Valós idejű EKG-görbe megjelenítés
 - Pulzus (HR) és vérnyomás (BP) élő grafikonok
@@ -100,7 +100,7 @@ Fejlesztői mód esetén a frontend a (http://localhost:5173) címen érhető el
 - Grafikonok ki/be kapcsolható panellel
 - Páciens azonosító megjelenítése
 
-# API végpontok
+## API végpontok
 
 | Metódus | Végpont | Leírás |
 |---------|---------|--------|
@@ -110,7 +110,7 @@ Fejlesztői mód esetén a frontend a (http://localhost:5173) címen érhető el
 
 WebSocket esemény: `vitalSigns` – 1 másodpercenként érkezik az aktuális adat.
 
-# Kihívások
+## Kihívások
 
 - Valós idejű adatfolyam stabil kezelése: a frontend oldalon biztosítani kellett, hogy a folyamatosan érkező Socket.IO adatok ne okozzanak akadozást a grafikonoknál.
 
